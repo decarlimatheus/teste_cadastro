@@ -1,0 +1,49 @@
+<div class="auth-container">
+  <div class="titleContainer">
+    <h2>Editando usuário: {{user.name}}</h2>
+  </div>
+  <form action="/update/{{user.email}}" method="post" class="formContainer">
+    <div class="form-control">
+      <label for="name">Nome:</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Digite o nome"
+        required
+        value="{{user.name}}"
+      />
+    </div>
+    <div class="form-control">
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        name="email"
+        placeholder="Digite o email"
+        required
+        readonly
+        value="{{user.email}}"
+      />
+    </div>
+    <div class="form-control">
+      <label for="phone">Telefone:</label>
+      <input
+        type="text"
+        name="phone"
+        placeholder="Digite o telefone"
+        required
+        value="{{user.phone}}"
+      />
+    </div>
+    <div class="form-control">
+      <label for="company">Empresa:</label>
+      <input
+        type="text"
+        name="company"
+        placeholder="Digite o nome da empresa"
+        required
+        value="{{user.company}}"
+      />
+    </div>
+    <button type="submit">Editar</button>
+  </form>
+</div>

@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/table.css" />
+  </head>
+  <body>
+    <header class="headerContainer">
+      <nav id="navbar">
+        <ul>
+          <li class="navbarLink"><a href="/">Formulário para cadastro</a></li>
+          <li class="navbarLink"><a href="/table">Cadastrados</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      {{#if messages.message}}
+        <div class="message">
+          {{messages.message}}
+        </div>
+      {{/if}}
+      {{{body}}}
+    </main>
+    <footer>
+      <p><span>Dev Matheus</span> &copy; 2023</p>
+    </footer>
+  </body>
+</html>

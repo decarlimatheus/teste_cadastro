@@ -1,0 +1,40 @@
+<div class="titleContainer">
+  <h1>Tabela de usuários cadastrados</h1>
+</div>
+<form action="/table" method="GET">
+
+</form>
+<div class="tableContainer">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Empresa</th>
+        <th colspan="2">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.phone}}</td>
+          <td>{{this.company}}</td>
+          <td>
+            <a href="/edit/{{this.email}}" class="edit actionButton">Editar</a>
+          </td>
+          <td>
+            <form action="/delete/{{this.email}}" method="POST">
+              <input type="hidden" value={{this.email}} name="email" />
+              <button type="submit" class="delete actionButton">Deletar</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</div>

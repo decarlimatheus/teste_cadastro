@@ -1,0 +1,20 @@
+.headerContainer {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #252525;
+}
+
+.headerContainer > #navbar > ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbarLink a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbarLink a:hover {
+  color: #666;
+  transition: color 0.5s;
+}
